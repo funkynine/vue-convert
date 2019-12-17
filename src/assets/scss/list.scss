@@ -1,0 +1,13 @@
+.currencies {
+  margin-top: 2%;
+}
+
+.currencies-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.currencies-list__item {
+  margin: 10px;
+}
