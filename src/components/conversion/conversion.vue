@@ -1,5 +1,5 @@
 <template>
-  <div class="conversion">
+  <div class="conversion container">
     <h1>Conversion</h1>
     <v-container id="dropdown">
       <v-col cols="12" sm="4">
@@ -14,7 +14,7 @@
         ></v-overflow-btn>
       </v-col>
     </v-container>
-    <input type="text" class="enter" v-model="userEnter">
+    <input type="text" class="enter" v-model="userEnter" v-mask="'#########'">
     <p v-if="isShowCounter"> = {{ count }} </p>
     <v-btn class="ma-2" outlined color="indigo" @click="submit(currency)">Convert</v-btn>
   </div>
