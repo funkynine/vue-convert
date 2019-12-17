@@ -1,6 +1,7 @@
 export default {
   state: {
     value: [],
+    valueNames: [],
   },
   mutations: {
     createNewList(state, value) {
@@ -18,6 +19,10 @@ export default {
   getters: {
     ListValue(state) {
       return state.value;
+    },
+    ListValueNames(state) {
+      state.value.forEach(element => state.valueNames.push(element.ccy));
+      return state.valueNames;
     },
   },
 };

@@ -2,10 +2,21 @@
   <div class="list-currencies">
     <h1>List Currencies</h1>
     <div v-for="item in ListValue" :key="item.id" class="currencies">
-      <p> {{ item.ccy }} </p>
-      <p> {{ item.base_ccy }} </p>
-      <p> {{ item.buy }} </p>
-      <p> {{ item.sale }} </p>
+      <v-card
+        class="mx-auto"
+        max-width="344"
+        outlined
+      >
+        <v-list-item three-line>
+          <v-list-item-content>
+            <div class="overline mb-4">currency</div>
+            <v-list-item-title class="headline mb-1">
+              {{ item.base_ccy }} to {{ item.ccy }}
+            </v-list-item-title>
+            <v-list-item-subtitle>{{ item.sale }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-card>
     </div>
   </div>
 </template>
@@ -26,7 +37,5 @@ export default {
 </script>
 
 <style scoped>
-  .currencies {
-    border: 1px solid lightgray;
-  }
+
 </style>

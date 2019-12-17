@@ -1,32 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Конвертация</router-link> |
-      <router-link to="/list">Список Валют</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+     <router-link to="/" class="links">Convert</router-link>
+     <router-link to="/list" class="links">List</router-link>
+    </v-app-bar>
+
+    <v-content>
+      <router-view/>
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  components: {},
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+<style scoped>
+  .links {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 </style>
