@@ -3,7 +3,7 @@
     <h1>Conversion</h1>
     <v-container id="dropdown">
       <v-col cols="12" sm="4">
-        <p>Currency UKR to</p>
+        <p>Currency to UAH</p>
 
         <v-overflow-btn
           class="my-2"
@@ -15,7 +15,7 @@
       </v-col>
     </v-container>
     <input type="text" class="enter" v-model="userEnter" v-mask="'#########'">
-    <p v-if="isShowCounter"> = {{ count }} </p>
+    <v-chip outlined v-if="isShowCounter" class="output" >{{ count }}</v-chip>
     <v-btn class="ma-2" outlined color="indigo" @click="submit(currency)">Convert</v-btn>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       count: 0,
-      userEnter: 0,
+      userEnter: null,
       dropdown_icon: [],
       isShowCounter: false,
       currency: '',

@@ -12,7 +12,7 @@
             <v-list-item-content>
               <div class="overline mb-4">currency</div>
               <v-list-item-title class="headline mb-1">
-                {{ item.base_ccy }} to {{ item.ccy }}
+                {{ item.ccy }} to {{ item.base_ccy }}
               </v-list-item-title>
               <v-list-item-subtitle>{{ item.sale }}</v-list-item-subtitle>
             </v-list-item-content>
